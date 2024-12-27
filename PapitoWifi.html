@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contrata tu servicio de WiFi de alta calidad para el hogar y la oficina.">
+  <title>Contratar WiFi - Tu conexión confiable</title>
+  <style>
+    /* Reset de estilos por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos generales */
+body {
+  background-color: #f4f7fb;
+  color: #333;
+  font-family: 'Lora', serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo del header */
+header {
+  background-color: #2a2a2a;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007BFF;
+}
+
+/* Sección de introducción (Inicio) */
+.intro {
+  background-color: #009BFF;
+  color: #fff;
+  padding: 200px 80px;
+  text-align: center;
+  background-image: url('image.png'); /* Imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid #fff;
+}
+
+.intro::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Oscurece un poco el fondo para resaltar el texto */
+  z-index: 1;
+}
+
+.intro-content {
+  position: relative;
+  z-index: 2;
+}
+
+.intro h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 2s ease-out;
+}
+
+.intro p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: 300;
+  animation: fadeIn 2.5s ease-out;
+}
+
+.intro .btn {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  animation: fadeIn 3s ease-out;
+}
+
+.intro .btn:hover {
+  background-color: #e65c00;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo de los servicios */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.service-box {
+  background-color: #fff;
+  padding: 40px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.service-box h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.service-box p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.service-box .btn {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.service-box .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Efecto de sombra al pasar el ratón sobre las cajas de servicio */
+.service-box:hover {
+  box-shadow: 0 6px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilo de la sección de contacto */
+.contact {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+  border-top: 4px solid #007BFF;
+}
+
+.contact h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.contact p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128C7E;
+}
+
+/* Estilo del footer */
+footer {
+  background-color: #2a2a2a;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+/* Estilo responsive para dispositivos móviles */
+@media (max-width: 768px) {
+  .intro h2 {
+    font-size: 36px;
+  }
+
+  .intro p {
+    font-size: 18px;
+  }
+
+  .intro .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  .services h2 {
+    font-size: 28px;
+  }
+
+  .service-box {
+    padding: 25px;
+  }
+
+  .contact h2 {
+    font-size: 28px;
+  }
+
+  .contact p {
+    font-size: 18px;
+  }
+
+  .whatsapp-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>PAPITO WiFi</h1>
+      </div>
+      <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="intro">
+  <div class="intro-content">
+    <h2>¡Conéctate a la Velocidad que Mereces!</h2>
+    <p>Disfruta de un servicio WiFi rápido, seguro y confiable en tu hogar o tu oficina. Con nosotros, tu conexión nunca se detiene.</p>
+    <a href="#servicios" class="btn">Descubre Nuestros Servicios</a>
+  </div>
+</section>
+
+  <section id="servicios" class="services">
+    <h2>Nuestros Servicios</h2>
+    <div class="service-box">
+      <h3>WiFi para el Hogar</h3>
+      <p>Conexión rápida y estable para disfrutar de streaming, videollamadas y navegación sin interrupciones.</p>
+      <p>Desde <strong>$350/mes</strong></p>
+      <p>Más $1500 de instalación (esto solo si no cuentas con los aparatos)</p>
+      <a href="#contacto" class="btn">Contratar</a>
+    </div>
+    <!-- Puedes agregar más servicios aquí -->
+  </section>
+
+  <section id="contacto" class="contact">
+    <h2>Contacto</h2>
+    <p>¿Listo para contratar tu servicio? ¡Contáctanos y empieza a disfrutar de la mejor conexión!</p>
+    <p>Si prefieres contactarnos por WhatsApp, haz clic en el siguiente enlace:</p>
+    <a href="https://wa.me/4931586742" class="whatsapp-btn" target="_blank">Contactar por WhatsApp</a>
+  </section>
+
+  <footer>
+    <p>; 2024 PAPITO WiFi. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
